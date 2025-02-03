@@ -5,7 +5,9 @@ const verPosts = async () => {
     const consultaFotos = {
       text: "select * from posts",
     };
+    //console.log("print fotos", consultaFotos);
     const result = await db.query(consultaFotos);
+    //console.log("print result", result);
     return result.rows;
   } catch (err) {
     console.log(err.message);

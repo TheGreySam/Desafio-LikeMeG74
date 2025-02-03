@@ -33,4 +33,5 @@ const config = {
     password: process.env.DB_PASSWORD,
     port: process.env.DB_PORT
 };
+//console.log(config);
 export const db = new Pool(config);

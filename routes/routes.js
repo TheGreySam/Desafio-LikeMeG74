@@ -12,11 +12,12 @@ router.get('/', (req, res) => {
 //get
 router.get('/posts', async (req, res) => {
     const mostrarPosts = await verPosts();
+    //console.log(mostrarPosts, "mostrarPosts");
     res.json(mostrarPosts)
 })
 
 //add 
-router.post("/post", async (req, res) => {
+router.post("/posts", async (req, res) => {
     const { titulo, img, descripcion } = req.body;
     const post = [titulo, img, descripcion];
     const result = await agregarPost(post);
